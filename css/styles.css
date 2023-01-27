@@ -34,18 +34,21 @@ header h1 {
   font-size: 1.6em;
   /* border: 1px solid; */
   margin: 0;
+  animation: leftright 1000ms;
 }
 
 header h2 {
   font-weight: 600;
   font-size: 1.6em;
   margin: 0;
+  animation: rightleft 1000ms;
 }
 
 header p {
   font-size: 1.05em;
   color: var(--GrayishBlue);
   margin-bottom: 70px;
+  animation: updown 1000ms;
 }
 
 /* ----------------------cards-container---------------------------*/
@@ -54,6 +57,7 @@ header p {
   /* border: 1px solid; */
   max-width: 500px;
   margin: 0 auto;
+  animation: downup 1000ms;
 }
 
 .cards {
@@ -160,5 +164,42 @@ header p {
   .cards {
     width: 355px;
     height: 254px;
+  }
+}
+
+/* ---------------------- Animations ----------------------------*/
+@keyframes updown {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes downup {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes leftright {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rightleft {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0px);
   }
 }
